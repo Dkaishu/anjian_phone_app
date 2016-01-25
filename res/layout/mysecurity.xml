@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:binding="http://www.gueei.com/android-binding/"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/color0"
+    android:orientation="vertical" >
+
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:background="@drawable/mysecuritytitle"
+        android:gravity="right"
+        android:text="我的安检      "
+        android:textColor="@color/white"
+        android:textSize="@dimen/NoticeTopTitleSize" />
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="15dp"
+            android:layout_weight="1"
+            android:orientation="vertical" >
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/fillet4" >
+
+                <TextView
+                    android:id="@+id/textView2"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="12"
+                    android:gravity="center_horizontal"
+                    android:text="地址"
+                    android:textColor="@color/white" />
+
+                <TextView
+                    android:id="@+id/textView3"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="4"
+                    android:gravity="center_horizontal"
+                    android:text="上传状态"
+                    android:textColor="@color/white" />
+
+                <TextView
+                    android:id="@+id/textView3"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="4"
+                    android:gravity="center_horizontal"
+                    android:text="状态"
+                    android:textColor="@color/white" />
+            </LinearLayout>
+
+            <ListView
+                android:id="@+id/listView1"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_marginTop="5dp"
+                android:background="@drawable/list"
+                android:divider="#d0cece"
+                android:dividerHeight="1dp"
+                binding:itemSource="plainList"
+                binding:itemTemplate="@layout/security_entry" >
+            </ListView>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="42dp" >
+
+            <ImageView
+                android:id="@+id/imageViewAll"
+                android:layout_width="0dp"
+                android:layout_height="42dp"
+                android:layout_weight="10"
+                binding:onClick="AllClicked"
+                binding:source="allImgId" />
+
+            <ImageView
+                android:id="@+id/imageViewYi"
+                android:layout_width="0dp"
+                android:layout_height="42dp"
+                android:layout_weight="10"
+                binding:onClick="YiImgClicked"
+                binding:source="yiImgId" />
+
+            <ImageView
+                android:id="@+id/imageViewJu"
+                android:layout_width="0dp"
+                android:layout_height="42dp"
+                android:layout_weight="10"
+                binding:onClick="JuImgClicked"
+                binding:source="juImgId" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="42dp"
+            android:layout_marginBottom="5dp" >
+
+            <ImageView
+                android:id="@+id/imageViewWu"
+                android:layout_width="0dp"
+                android:layout_height="42dp"
+                android:layout_weight="10"
+                binding:onClick="WuImgClicked"
+                binding:source="wuImgId" />
+
+            <ImageView
+                android:id="@+id/imageViewWu"
+                android:layout_width="0dp"
+                android:layout_height="42dp"
+                android:layout_weight="10"
+                binding:onClick="WeixiuImgClicked"
+                binding:source="weixiuImgId" />
+
+            <TextView
+                android:id="@+id/textView4"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="10" />
+
+        </LinearLayout>
+</LinearLayout>
